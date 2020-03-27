@@ -1,0 +1,16 @@
+@mixin weight-and-color($font-weight, $main-font-color) {
+  font-weight: $font-weight;
+  color: $main-font-color;
+}
+
+@mixin img-display {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin media-query($media-query-br) {
+	@media only screen and (min-width: $media-query-br) {
+    	@content;
+  	}
+}

@@ -1,0 +1,25 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  color: $button-font-color;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background-color 0.6s ease;
+}
+
+@each $notification, $color in (default, #51ddfc), 
+(error, #e4757a), (info, #927bc1), (success, #63cc82), 
+(warning, #fd7856) {
+  .#{$notification} {
+    background-color: $color;
+    &:hover {
+    background-color: lighten($color, 15%);
+    }
+  }
+}
